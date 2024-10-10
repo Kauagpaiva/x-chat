@@ -2,7 +2,7 @@ import Chat from "../components/chat";
 
 export default function Home() {
   return (
-    <div className="bg-zinc-800 rounded-[10px] flex justify-center items-center w-[70%] justify-self-center">
+    <div className="bg-zinc-800 rounded-[10px] flex justify-center items-center w-[70%]">
       <Chat></Chat>
     </div>
   );
