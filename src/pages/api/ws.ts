@@ -12,7 +12,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     wss.on('connection', (ws) => {
       ws.on('message', async (message: string) => {
-        // Quando receber uma mensagem, envia para a API do ChatGPT
         const content = JSON.parse(message).message;
 
         try {
@@ -25,14 +24,34 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
             body: JSON.stringify({
               model: 'gpt-3.5-turbo',
               messages: [{ role: 'user', content }],
+              stream: true, // Habilita o streaming
             }),
           });
 
-          const data = await response.json();
-          const assistantMessage = data.choices[0].message.content;
+          // Lê a resposta em chunks (partes)
+          const reader = response.body?.getReader();
+          const decoder = new TextDecoder('utf-8');
+          let done = false;
 
-          // Envia a resposta do ChatGPT de volta ao cliente via WebSocket
-          ws.send(JSON.stringify({ role: 'assistant', content: assistantMessage }));
+          while (!done) {
+            const { value, done: readerDone } = await reader!.read();
+            done = readerDone;
+            const chunk = decoder.decode(value, { stream: true });
+            
+            // Envia cada fragmento de resposta para o cliente WebSocket
+            const lines = chunk.split('\n').filter(line => line.trim() !== '');
+            for (const line of lines) {
+              const json = line.replace(/^data: /, '');
+              if (json === '[DONE]') {
+                break;
+              }
+              const parsed = JSON.parse(json);
+              const assistantMessage = parsed.choices[0]?.delta?.content;
+              if (assistantMessage) {
+                ws.send(JSON.stringify({ role: 'assistant', content: assistantMessage }));
+              }
+            }
+          }
         } catch (error) {
           console.error('Erro ao processar a mensagem:', error);
           ws.send(JSON.stringify({ error: 'Erro ao processar a mensagem' }));
@@ -44,6 +63,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       console.log('WebSocket Server running on port 4000');
     });
   }
-  
+
   res.status(200).json({ message: 'WebSocket server running' });
 }
