@@ -12,7 +12,7 @@ const Chat = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [ws, setWs] = useState<WebSocket | null>(null);
-  const [currentAssistantMessage, setCurrentAssistantMessage] = useState<string>(''); // Armazena a mensagem enquanto está sendo "digitada"
+  const [currentAssistantMessage, setCurrentAssistantMessage] = useState<string>('');
 
   useEffect(() => {
     const socket = new WebSocket('ws://localhost:4000');
