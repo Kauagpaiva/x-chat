@@ -13,7 +13,7 @@ export default function Header ( {isSidebarOpen, toggleSidebar}: HeaderProps){
         <div className="flex items-center justify-between px-4">
             {!isSidebarOpen?
             <div className="flex items-center gap-2">
-                <ToggleButton isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} className="hover:bg-zinc-800 rounded-md p-2"/>
+                <ToggleButton toggleSidebar={toggleSidebar} className="hover:bg-zinc-800 rounded-md p-2"/>
                 <DownloadButton className="hover:bg-zinc-800 rounded-md p-2"/>
             </div> : null}
             
