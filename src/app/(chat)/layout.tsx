@@ -12,7 +12,7 @@ export default function ChatLayout({ children }: { children: ReactNode }) {
   };
 
   return (
-    <div className="mx-auto grid min-h-screen w-full max-w-[1600px] grid-rows-[auto,1fr,auto] gap-2 py-4 px-8">
+    <div className="mx-auto grid min-h-screen w-full max-w-[1600px] grid-rows-[auto,1fr,auto] gap-2 py-4">
       <Header isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       
       <div className="flex w-full">

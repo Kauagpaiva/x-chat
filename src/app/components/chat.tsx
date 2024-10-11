@@ -17,12 +17,10 @@ const Chat = () => {
   useEffect(() => {
     const socket = new WebSocket('ws://localhost:4000');
 
-    // Recebe os fragmentos de mensagens da API
     socket.onmessage = (event) => {
       const data = JSON.parse(event.data);
 
       if (data.role === 'assistant') {
-        // Atualiza a mensagem em construção
         setCurrentAssistantMessage((prev) => prev + data.content);
       }
     };
@@ -42,10 +40,9 @@ const Chat = () => {
     const newMessage: Message = { role: 'user', content: message };
     setMessages((prevMessages) => [...prevMessages, newMessage]);
 
-    ws.send(JSON.stringify({ message })); // Envia a mensagem ao WebSocket server
+    ws.send(JSON.stringify({ message }));
   };
 
-  // Finaliza a mensagem do assistente quando o stream terminar
   useEffect(() => {
     if (currentAssistantMessage) {
       const timer = setTimeout(() => {
@@ -53,8 +50,8 @@ const Chat = () => {
           ...prevMessages,
           { role: 'assistant', content: currentAssistantMessage },
         ]);
-        setCurrentAssistantMessage(''); // Reseta a mensagem atual para futuras interações
-      }, 1000); // Simula um pequeno delay antes de finalizar a mensagem
+        setCurrentAssistantMessage(''); 
+      }, 1000); 
 
       return () => clearTimeout(timer);
     }
@@ -75,7 +72,6 @@ const Chat = () => {
           </div>
         ))}
 
-        {/* Exibe a mensagem sendo digitada em tempo real */}
         {currentAssistantMessage && (
           <div className="p-2 my-2 w-fit max-w-prose break-words whitespace-pre-wrap bg-gray-300 text-black self-start mr-auto rounded-lg">
             {currentAssistantMessage}

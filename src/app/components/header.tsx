@@ -9,7 +9,7 @@ type HeaderProps = {
 }
 export default function Header ( {isSidebarOpen, toggleSidebar}: HeaderProps){
     return(
-        <div className="flex items-center justify-between ">
+        <div className="flex items-center justify-between px-4">
             <div className="flex items-center gap-2">
                 <ToggleButton isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
                 <button>
