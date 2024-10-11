@@ -62,7 +62,7 @@ const Chat = () => {
 
   return (
     <div className="flex flex-col h-full w-full p-4">
-      <div className="flex-grow overflow-auto">
+      <div className="flex-grow overflow-auto pb-[16px]">
         {messages.map((message, index) => (
           <div
             key={index}

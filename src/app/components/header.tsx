@@ -12,6 +12,12 @@ export default function Header ( {isSidebarOpen, toggleSidebar}: HeaderProps){
         <div className="flex items-center justify-between ">
             <div className="flex items-center gap-2">
                 <ToggleButton isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+                <button>
+                    <Image src="/download.svg" alt='download' width={30} height={30}></Image>
+                </button>
+            </div>
+
+            <div className="flex gap-2">
                 <Image src="/logo.png" alt='logo' height={32} width={32}/>
                 <h1 className="text-2xl"><b>LOGO</b></h1>
             </div>
@@ -19,7 +25,7 @@ export default function Header ( {isSidebarOpen, toggleSidebar}: HeaderProps){
             <div className="flex items-center">
                 <Link href='/auth'>
                     <button className="flex items-center gap-2">
-                        <p>Sign out</p>
+                        <Image src="/sign-out.svg" alt="sign-out" width={30} height={30}></Image>
                         {/*<Image src="/logo.png" alt='seu perfil' height={32} width={32} className="rounded-[100px]"/>*/}
                     </button>
                 </Link>
