@@ -7,7 +7,6 @@ export default function SignIn(){
 
             <span className="text-[30px] font-semibold leading-[37.5px] font-poppins text-[#3ea59f]">Nova senha</span>
 
-
             <div className=" w-full flex flex-col gap-[16px]">
                 <p className="text-[18px] font-normal leading-[27px] font-poppins text-[#333333]">
                     Insira uma nova senha para a sua conta.

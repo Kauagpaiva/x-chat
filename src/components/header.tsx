@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import ToggleButton from "./ToggleButton";
+import ToggleButton from "./toggleButton";
 import DownloadButton from "./downloadButton";
 
 type HeaderProps = {

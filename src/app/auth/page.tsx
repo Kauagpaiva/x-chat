@@ -13,7 +13,7 @@ export default function auth(){
 
                 <div className="flex justify-between w-full">
                     <div className="flex gap-2">
-                        <input type="checkbox" />
+                        <input type="checkbox" className="accent-[#589b97a1]" />
                         <p className="text-[#372F30]">Lembrar-me</p>
                     </div>
                     <Link href='/auth/password' passHref>
