@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import InputField from '../components/inputField';
-import Button from '../components/button';
+import InputField from '@/components/inputField';
+import Button from '@/components/button';
 
 export default function auth(){
     return(

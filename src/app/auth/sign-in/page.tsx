@@ -1,6 +1,6 @@
-import Button from "@/app/components/button";
-import InputField from "@/app/components/inputField";
-import Tittle from "@/app/components/tittle";
+import Button from "@/components/button";
+import InputField from "@/components/inputField";
+import Tittle from "@/components/tittle";
 import Link from "next/link";
 
 export default function SignIn(){
@@ -14,20 +14,9 @@ export default function SignIn(){
                     <Tittle text='Crie a sua conta'></Tittle>
                 </div>
                 
-                <div className="flex flex-col gap-[8px]">
-                    <p className="text-[20px] font-medium leading-[30px] font-poppins text-[#333333]">Email</p>
-                    <InputField placeholder="Insira seu email"/>
-                </div>
-
-                <div className="flex flex-col gap-[8px]">
-                    <p className="text-[20px] font-medium leading-[30px] font-poppins text-[#333333]">Senha</p>
-                    <InputField placeholder="Crie uma senha forte"/>
-                </div>
-
-                <div className="flex flex-col gap-[8px]">
-                    <p className="text-[20px] font-medium leading-[30px] font-poppins text-[#333333]">Confirmar Senha</p>
-                    <InputField placeholder="Crie uma senha forte"/>
-                </div>
+                <InputField placeholder="Insira seu email" tittle="Email"/>
+                <InputField placeholder="Crie uma senha forte" tittle="Senha"/>
+                <InputField placeholder="Confirme sua senha" tittle="Confirmar senha"/>
             </div>
             <div className="w-[80%]">
                 <Button href="./" text="Continuar" variant="primary"/>

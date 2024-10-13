@@ -1,5 +1,5 @@
-import Button from "@/app/components/button";
-import InputField from "@/app/components/inputField";
+import Button from "@/components/button";
+import InputField from "@/components/inputField";
 
 export default function SignIn(){
     return(
@@ -13,12 +13,7 @@ export default function SignIn(){
                 <p className="text-[18px] font-normal leading-[27px] font-poppins text-[#333333]">
                     Insira o seu endereço de e-mail para receber um código para redefinir sua senha.
                 </p>
-                
-                <div className="flex flex-col gap-[8px]">
-                    <p className="text-[20px] font-medium leading-[30px] font-poppins text-[#333333]">Seu endereço de e-mail</p>
-                    <InputField placeholder="Email"/>
-                </div>
-
+                <InputField placeholder="Email" tittle="Seu endereço de e-mail"/>
             </div>
 
             <div className="flex flex-col w-[80%] gap-[16px]">

@@ -1,8 +1,8 @@
 "use client";
 
 import { ReactNode, useState } from "react";
-import Header from "../components/header";
-import SideBar from "../components/sideBar";
+import Header from "../../components/header";
+import SideBar from "../../components/sideBar";
 
 export default function ChatLayout({ children }: { children: ReactNode }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

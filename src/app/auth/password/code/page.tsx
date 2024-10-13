@@ -1,5 +1,5 @@
-import Button from "@/app/components/button";
-import InputField from "@/app/components/inputField";
+import Button from "@/components/button";
+import InputField from "@/components/inputField";
 
 export default function SignIn(){
     return(
@@ -11,14 +11,8 @@ export default function SignIn(){
             <div className=" w-full flex flex-col gap-[16px]">
                 <p className="text-[18px] font-normal leading-[27px] font-poppins text-[#333333]">
                     Verifique a caixa de entrada e insira o código de confirmação que enviamos no e-mail cadastrado.
-                </p>
-                
-                <div className="flex flex-col gap-[8px]">
-                    <p className="text-[20px] font-medium leading-[30px] font-poppins text-[#333333]">Insira o código</p>
-                    <InputField placeholder="Código"/>
-                    
-                </div>
-
+                </p> 
+                <InputField placeholder="Código" tittle="Insira o código"/>
             </div>
 
             <div className="flex flex-col w-[80%] gap-[16px]">

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import AuthModal from "../components/modalAuth";
+import AuthModal from "../../components/modalAuth";
 
 export default function AuthLayout ({ children }: { children: ReactNode}){
     return(

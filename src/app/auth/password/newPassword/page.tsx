@@ -1,5 +1,5 @@
-import Button from "@/app/components/button";
-import InputField from "@/app/components/inputField";
+import Button from "@/components/button";
+import InputField from "@/components/inputField";
 
 export default function SignIn(){
     return(
@@ -11,16 +11,9 @@ export default function SignIn(){
             <div className=" w-full flex flex-col gap-[16px]">
                 <p className="text-[18px] font-normal leading-[27px] font-poppins text-[#333333]">
                     Insira uma nova senha para a sua conta.
-                </p>
-                
-                <div className="flex flex-col gap-[8px]">
-                    <p className="text-[20px] font-medium leading-[30px] font-poppins text-[#333333]">Nova senha</p>
-                    <InputField placeholder="Crie uma senha forte"/>
-
-                    <p className="text-[20px] font-medium leading-[30px] font-poppins text-[#333333]">Confirmar Senha</p>
-                    <InputField placeholder="Confirmar senha"/>
-                </div>
-
+                </p>  
+                <InputField placeholder="Crie uma senha forte" tittle="Nova senha"/>
+                <InputField placeholder="Confirmar senha" tittle="Confirmar senha"/>
             </div>
 
             <div className="flex flex-col w-[80%] gap-[16px]">
