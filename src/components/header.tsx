@@ -27,7 +27,7 @@ export default function Header ( {isSidebarOpen, toggleSidebar}: HeaderProps){
                 <Link href='/auth'>
                     <button className="flex items-center gap-1">
                         <Image src="/sign-out.svg" alt="sign-out" width={30} height={30}></Image>
-                        <span>Sign out</span>
+                        <span>Sair</span>
                     </button>
                 </Link>
                 

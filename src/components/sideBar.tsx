@@ -14,7 +14,7 @@ const SideBar= ({toggleSidebar}: SidebarProps) => {
             <DownloadButton className="hover:bg-zinc-600 rounded-md p-2"/>
         </div>
 
-        <h2 className="text-white text-lg mb-4">Conversas Antigas</h2>
+        <h2 className="text-white text-lg mb-4">Histórico de Conversas</h2>
         <ul className="flex-1 overflow-y-auto">
             <OldChat tittle="Teste"/>
             <OldChat tittle="Teste"/>
