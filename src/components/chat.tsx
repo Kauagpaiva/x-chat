@@ -10,7 +10,6 @@ type Message = {
 
 const Chat = () => {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [input, setInput] = useState('');
   const [ws, setWs] = useState<WebSocket | null>(null);
   const [currentAssistantMessage, setCurrentAssistantMessage] = useState<string>('');
 
