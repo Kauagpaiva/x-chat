@@ -1,9 +1,15 @@
+"use client";
+
 import Button from "@/components/button";
 import InputField from "@/components/inputField";
 import Tittle from "@/components/tittle";
 import Link from "next/link";
 
 export default function SignIn(){
+    const sendForm = () => {
+        return //adicionar logica para conectar ao back
+    }
+
     return(
         <div className="flex flex-col items-center gap-[56px]">
             <div className=" w-full flex flex-col gap-[16px]">
@@ -19,7 +25,7 @@ export default function SignIn(){
                 <InputField placeholder="Confirme sua senha" tittle="Confirmar senha"/>
             </div>
             <div className="w-[80%]">
-                <Button href="./" text="Continuar" variant="primary"/>
+                <Button href="./" text="Continuar" variant="primary" onClick={sendForm}/>
             </div>
         </div>
     )

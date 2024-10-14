@@ -1,8 +1,16 @@
+"use client";
+
 import Link from 'next/link';
 import InputField from '@/components/inputField';
 import Button from '@/components/button';
 
 export default function auth(){
+
+    const sendForm = () => {
+        return //adicionar logica para conectar ao back
+    }
+
+
     return(
         <div className='w-full h-full flex flex-col items-center gap-[32px] mb-[10%]'>
             <h1 className="text-2xl font-medium leading-[36px] font-poppins text-[#333333]">Faça seu login ou crie uma conta</h1>
@@ -24,7 +32,7 @@ export default function auth(){
             </div>
 
             <div className="w-[80%] flex flex-col gap-[16px]">
-                <Button href="./" text="Entrar" variant="primary"/>
+                <Button href="./" text="Entrar" variant="primary" onClick={sendForm}/>
                 <Button href="/auth/sign-in" text="Cadastre-se" variant="secundary"/>
             </div>
         </div>

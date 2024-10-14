@@ -1,7 +1,13 @@
+"use client";
+
 import Button from "@/components/button";
 import InputField from "@/components/inputField";
 
 export default function SignIn(){
+
+    const sendCode = () => {
+        return //adicionar logica para conectar ao back
+    }
     return(
         <div className="flex flex-col items-center gap-[42px]">
 
@@ -16,7 +22,7 @@ export default function SignIn(){
 
             <div className="flex flex-col w-[80%] gap-[16px]">
                 <Button href="/auth/password/newPassword" text="Continuar" variant="primary"/>
-                <Button href="./code" text="Reenviar Código" variant="secundary"/>
+                <Button href="./code" text="Reenviar Código" variant="secundary" onClick={sendCode}/>
             </div>
         </div>
         

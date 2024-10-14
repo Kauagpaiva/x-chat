@@ -2,6 +2,10 @@ import Button from "@/components/button";
 import InputField from "@/components/inputField";
 
 export default function SignIn(){
+    const sendForm = () => {
+        return //adicionar logica para conectar ao back
+    }
+
     return(
         <div className="flex flex-col items-center gap-[42px]">
             <div className="flex flex-col items-center">
@@ -17,7 +21,7 @@ export default function SignIn(){
             </div>
 
             <div className="flex flex-col w-[80%] gap-[16px]">
-                <Button href="/auth/password/code" text="Enviar Código" variant="primary"/>
+                <Button href="/auth/password/code" text="Enviar Código" variant="primary" onClick={sendForm}/>
                 <Button href="./" text="Voltar" variant="secundary"/>
             </div>
         </div>

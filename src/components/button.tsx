@@ -4,9 +4,10 @@ type ButtonProps = {
     href: string;
     text: string;
     variant: 'primary' | 'secundary';
+    onClick?: () => void;
 }
 
-export default function Button({ href, text, variant = 'primary'}: ButtonProps){
+export default function Button({ href, text, variant = 'primary', onClick}: ButtonProps){
     const baseStyle ="w-full py-[16px] rounded-[12px] text-xl font-normal leading-[24px] font-poppins text-white"
     
     const variantStyle =
@@ -16,7 +17,7 @@ export default function Button({ href, text, variant = 'primary'}: ButtonProps){
 
     return(
         <Link href={href} passHref className='w-full'>
-            <button className={`${baseStyle} ${variantStyle}`}>{text}</button>
+            <button onClick={onClick} className={`${baseStyle} ${variantStyle}`}>{text}</button>
         </Link>
     )
 }
