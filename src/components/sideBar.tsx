@@ -7,6 +7,11 @@ type SidebarProps = {
 }
 
 const SideBar= ({toggleSidebar}: SidebarProps) => {
+
+  const setChat = () => {
+    return
+  }
+
   return (
     <div className="bg-zinc-800 h-full p-4 w-72 rounded-r-[10px] flex flex-col">
         <div className="flex justify-between">
@@ -16,42 +21,9 @@ const SideBar= ({toggleSidebar}: SidebarProps) => {
 
         <h2 className="text-white text-lg mb-4 mt-2">Histórico de Conversas</h2>
         <ul className="flex-1 overflow-y-auto">
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
-            <OldChat tittle="Teste"/>
+            <OldChat tittle="Teste" onClick={setChat}/>
+            <OldChat tittle="Teste" onClick={setChat}/>
+            <OldChat tittle="Teste" onClick={setChat}/>
         </ul>
     </div>
   );

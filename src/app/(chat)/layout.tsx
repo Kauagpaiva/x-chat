@@ -16,7 +16,6 @@ export default function ChatLayout({ children }: { children: ReactNode }) {
       {isSidebarOpen && <SideBar toggleSidebar={toggleSidebar}/>}
       <div className="mx-auto grid h-screen w-full max-w-[1600px] grid-rows-[auto,1fr] gap-2 py-4">
         <Header isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-        
         <div className="flex w-full h-full flex-1 overflow-y-auto ">  
           <div className="flex flex-grow h-full justify-center">
             {children}
